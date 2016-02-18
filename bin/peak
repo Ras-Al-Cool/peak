@@ -21,6 +21,9 @@ var Parse = function Parse () {
   watch.addArgument(['-c', '--config'], { help: 'config file path' });
   
   deploy.addArgument(['-c', '--config'], { help: 'config file path' });
+  deploy.addArgument(['-b', '--blog'], { help: 'tumblr blog to use as context and to deploy to' });
+  deploy.addArgument(['-e', '--email'], { help: 'tumblr blog e-mail address' });
+  deploy.addArgument(['-p', '--password'], { help: 'tumblr blog password' });
 
   this.args = parser.parseArgs();
 }
